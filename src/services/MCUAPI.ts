@@ -9,16 +9,12 @@ const get = async (endpoint: string) => {
 	return response.data;
 };
 
-const getResource = async (resource: string, id = null) => {
-	return get(`/${resource}/${id}`);
-};
-
 /**
  * Get movies
  */
 export const getMovies = async ({ queryKey }: any) => {
 	const [_key] = queryKey;
-	return getResource("movies");
+	return get("/movies");
 };
 
 /**
@@ -34,7 +30,7 @@ export const getSingleMovie = async ({ queryKey }: any) => {
  */
 export const getTvShows = async ({ queryKey }: any) => {
 	const [_key] = queryKey;
-	return getResource("tvshows");
+	return get("/tvshows");
 };
 
 /**
