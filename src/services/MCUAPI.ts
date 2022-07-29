@@ -1,10 +1,12 @@
+import { ITVShows } from "./../interfaces/ITVShows";
+import { IMovies } from "./../interfaces/IMovies";
 import axios from "axios";
 
 axios.defaults.baseURL =
 	import.meta.env.VITE_SWAPI_BASE_URL || "https://mcuapi.herokuapp.com/api/v1/";
 
 const get = async (endpoint: string) => {
-	const response = await axios.get(endpoint);
+	const response = await axios.get<IMovies[] | ITVShows[]>(endpoint);
 
 	return response.data;
 };
