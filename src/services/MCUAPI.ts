@@ -6,9 +6,10 @@ axios.defaults.baseURL =
 	import.meta.env.VITE_SWAPI_BASE_URL || "https://mcuapi.herokuapp.com/api/v1/";
 
 const get = async (endpoint: string) => {
-	const response = await axios.get<IMovies[] | ITVShows[]>(endpoint);
+	const response = await axios.get(endpoint);
+	const res: IMovies[] | ITVShows[] = response.data.data;
 
-	return response.data;
+	return res;
 };
 
 /**
