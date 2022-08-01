@@ -6,21 +6,10 @@ const Movies = () => {
 
 	console.log("Movies:", data);
 
-	console.log(typeof data);
-
-	// let allMyMovies = data[0].map((movie) => {
-	// 	return (
-	// 		<div>
-	// 			<p>{movie.title}</p>
-	// 		</div>
-	// 	);
-	// });
-
 	return (
-		// <div>{isSuccess && data.map((movie) => <div>{movie.title}</div>)}</div>
 		<div>
-			<p>Tjena</p>
-			{/* {allMyMovies} */}
+			{isSuccess &&
+				data.map((movie: any) => <div key={movie.id}>{movie.title}</div>)}
 		</div>
 	);
 };
