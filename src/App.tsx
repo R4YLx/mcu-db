@@ -5,7 +5,7 @@ import TVShows from "./pages/TVShows";
 
 function App() {
 	return (
-		<div className="App bg-gradient-to-t from-gray-900 to-gray-800">
+		<div className="App bg-gradient-to-t from-gray-900 to-zinc-900">
 			<h1 className="text-3xl font-bold underline">Hello world!</h1>
 
 			<Routes>
