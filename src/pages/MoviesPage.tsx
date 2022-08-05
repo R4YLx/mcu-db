@@ -4,7 +4,7 @@ import MovieCard from "../components/MovieCard";
 import { IMovies } from "../interfaces/IMovies";
 import { getMovies } from "../services/MCUAPI";
 
-const Movies = () => {
+const MoviesPage = () => {
 	const { data, isSuccess } = useQuery(["movies"], getMovies);
 
 	console.log("Movies:", data);
@@ -36,4 +36,4 @@ const Movies = () => {
 	);
 };
 
-export default Movies;
+export default MoviesPage;

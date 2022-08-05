@@ -1,7 +1,7 @@
 import { Routes, Route } from "react-router-dom";
 import "./scss/App.scss";
-import Movies from "./pages/Movies";
-import TVShows from "./pages/TVShows";
+import MoviesPage from "./pages/MoviesPage";
+import TVShowsPage from "./pages/TVShowsPage";
 import Navbar from "./components/Navbar";
 import MovieDetails from "./pages/MovieDetails";
 import HomePage from "./pages/HomePage";
@@ -13,8 +13,8 @@ function App() {
 
 			<Routes>
 				<Route path="/" element={<HomePage />} />
-				<Route path="/movies" element={<Movies />} />
-				<Route path="/tvshows" element={<TVShows />} />
+				<Route path="/movies" element={<MoviesPage />} />
+				<Route path="/tvshows" element={<TVShowsPage />} />
 				<Route path="/movies/:id" element={<MovieDetails />} />
 			</Routes>
 		</div>
