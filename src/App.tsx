@@ -3,6 +3,7 @@ import "./scss/App.scss";
 import Movies from "./pages/Movies";
 import TVShows from "./pages/TVShows";
 import Navbar from "./components/Navbar";
+import MovieDetails from "./pages/MovieDetails";
 
 function App() {
 	return (
@@ -12,6 +13,7 @@ function App() {
 			<Routes>
 				<Route path="/movies" element={<Movies />} />
 				<Route path="/tvshows" element={<TVShows />} />
+				<Route path="/movies/:id" element={<MovieDetails />} />
 			</Routes>
 		</div>
 	);
