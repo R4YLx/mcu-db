@@ -1,5 +1,5 @@
-import { IDataTvShows } from "./../interfaces/IDataTvShows";
-import { IDataMovies } from "../interfaces/IDataMovies";
+import { IDataTvShows, ITvShows } from "./../interfaces/IDataTvShows";
+import { IDataMovies, IMovies } from "../interfaces/IDataMovies";
 
 import axios from "axios";
 
@@ -8,6 +8,11 @@ axios.defaults.baseURL =
 
 const get = async (endpoint: string) => {
 	const response = await axios.get<IDataMovies | IDataTvShows>(endpoint);
+
+	return response.data;
+};
+const getID = async (endpoint: string) => {
+	const response = await axios.get<IMovies | ITvShows>(endpoint);
 
 	return response.data;
 };
@@ -25,7 +30,7 @@ export const getMovies = async ({ queryKey }: any) => {
  */
 export const getSingleMovie = async ({ queryKey }: any) => {
 	const [_key, { id }] = queryKey;
-	return get(`/movies/${id}/`);
+	return getID(`/movies/${id}/`);
 };
 
 /**
