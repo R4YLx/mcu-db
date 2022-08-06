@@ -22,10 +22,12 @@ const MoviesPage = () => {
 							</figure>
 							<div className="card-body bg-base-100 shadow-xl">
 								<h2 className="card-title">{movie.title}</h2>
-								<p className="truncate italic">"{movie.overview}"</p>
+								<p className="truncate italic">Synopsis: {movie.overview}</p>
 								<Link to={`/movies/${movie.id}`}>
 									<div className="card-actions justify-end">
-										<button className="btn btn-primary mt-4">Read more</button>
+										<button className="btn bg-[#ED1D24] btn-outline text-white mt-4">
+											Read more
+										</button>
 									</div>
 								</Link>
 							</div>

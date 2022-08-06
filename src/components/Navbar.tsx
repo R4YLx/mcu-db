@@ -2,7 +2,7 @@ import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
 	return (
-		<div className="navbar bg-base-100">
+		<div className="navbar bg-[#ED1D24]">
 			<div className="navbar-start">
 				<div className="dropdown">
 					<label tabIndex={0} className="btn btn-ghost btn-circle">
@@ -11,7 +11,7 @@ const Navbar = () => {
 							className="h-5 w-5"
 							fill="none"
 							viewBox="0 0 24 24"
-							stroke="currentColor"
+							stroke="white"
 						>
 							<path
 								strokeLinecap="round"
@@ -38,7 +38,8 @@ const Navbar = () => {
 				</div>
 			</div>
 			<div className="navbar-center">
-				<a className="btn btn-ghost normal-case text-xl">MCU-DB</a>
+				{/* <a className="btn btn-ghost normal-case text-xl">MCU-DB</a> */}
+				<img src="../../public/logo.svg" alt="logo" className="w-20" />
 			</div>
 			<div className="navbar-end">
 				<button className="btn btn-ghost btn-circle">
@@ -47,7 +48,7 @@ const Navbar = () => {
 						className="h-5 w-5"
 						fill="none"
 						viewBox="0 0 24 24"
-						stroke="currentColor"
+						stroke="white"
 					>
 						<path
 							strokeLinecap="round"
