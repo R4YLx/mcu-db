@@ -1,7 +1,7 @@
 import { useQuery } from "@tanstack/react-query";
 import { Link } from "react-router-dom";
 import MovieCard from "../components/MovieCard";
-import { IMovies } from "../interfaces/IMovies";
+import { IMovies } from "../interfaces/IDataMovies";
 import { getMovies } from "../services/MCUAPI";
 
 const MoviesPage = () => {
@@ -12,7 +12,7 @@ const MoviesPage = () => {
 	return (
 		<main className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-4">
 			{isSuccess &&
-				data?.data.map((movie: IMovies) => (
+				data?.data.map((movie: any) => (
 					<div key={movie.id}>
 						{/* <MovieCard movie={movie} /> */}
 

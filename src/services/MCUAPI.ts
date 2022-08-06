@@ -1,11 +1,13 @@
+import { IDataTvShows } from "./../interfaces/IDataTvShows";
+import { IDataMovies } from "../interfaces/IDataMovies";
+
 import axios from "axios";
-import { IData } from "../interfaces/IData";
 
 axios.defaults.baseURL =
 	import.meta.env.VITE_SWAPI_BASE_URL || "https://mcuapi.herokuapp.com/api/v1/";
 
 const get = async (endpoint: string) => {
-	const response = await axios.get<IData>(endpoint);
+	const response = await axios.get<IDataMovies | IDataTvShows>(endpoint);
 
 	return response.data;
 };
