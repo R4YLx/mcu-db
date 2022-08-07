@@ -6,50 +6,42 @@ import axios from "axios";
 axios.defaults.baseURL =
 	import.meta.env.VITE_SWAPI_BASE_URL || "https://mcuapi.herokuapp.com/api/v1/";
 
-const get = async (endpoint: string) => {
-	const response = await axios.get<IDataMovies | IDataTvShows>(endpoint);
+/**
+ * Get all movies
+ */
+const getMovies = async (endpoint: string) => {
+	const res = await axios.get<IDataMovies>(endpoint);
 
-	return response.data;
-};
-const getID = async (endpoint: string) => {
-	const response = await axios.get<IMovies | ITvShows>(endpoint);
-
-	return response.data;
+	return res.data;
 };
 
 /**
- * Get movies
+ * Get all tv shows
  */
-export const getMovies = async ({ queryKey }: any) => {
-	const [_key] = queryKey;
-	return get("/movies");
+const getTvShows = async (endpoint: string) => {
+	const res = await axios.get<IDataTvShows>(endpoint);
+
+	return res.data;
 };
 
 /**
  * Get single movie
  */
-export const getSingleMovie = async ({ queryKey }: any) => {
-	const [_key, { id }] = queryKey;
-	return getID(`/movies/${id}/`);
-};
+export const getSingleMovie = async (id: number) => {
+	const res = await axios.get<IMovies>(`/movies/${id}`);
 
-/**
- * Get tv show
- */
-export const getTvShows = async ({ queryKey }: any) => {
-	const [_key] = queryKey;
-	return get("/tvshows");
+	return res.data;
 };
 
 /**
  * Get single tv show
  */
-export const getSingleTvShow = async ({ queryKey }: any) => {
-	const [_key, { id }] = queryKey;
-	return get(`/tvshows/${id}/`);
+export const getSingleTvShow = async (id: number) => {
+	const res = await axios.get<ITvShows>(`/tvshows/${id}`);
+
+	return res.data;
 };
 
-// eslint-disable-next-line import/no-anonymous-default-export
 export default {
 	getMovies,
 	getSingleMovie,
