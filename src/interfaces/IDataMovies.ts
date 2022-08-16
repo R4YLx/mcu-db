@@ -9,7 +9,7 @@ export interface IMovie {
 	overview: string;
 	phase: number;
 	post_credit_scenes: number;
-	related_movies: IMovie[];
+	related_movies?: IMovie[];
 	release_date: string;
 	saga: string;
 	title: string;

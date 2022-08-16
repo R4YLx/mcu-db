@@ -1,13 +1,32 @@
+import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
-import { getSingleMovie } from "../services/MCUAPI";
+import { IMovie } from "../interfaces/IDataMovies";
+import MCUAPI, { getSingleMovie } from "../services/MCUAPI";
+
+type DataDetails = {
+	id: number;
+};
 
 const MovieDetails = () => {
-	const { id } = useParams();
+	const [data, setData] = useState<IMovie>();
+	const [isLoading, setIsLoading] = useState<boolean>(false);
+	const params = useParams();
 	const navigate = useNavigate();
+
+	const fetchSingleMovie = async () => {
+		setIsLoading(true);
+		const movieData = await MCUAPI.getSingleMovie(Number(params.id));
+		setData(movieData);
+		setIsLoading(false);
+	};
+
+	useEffect(() => {
+		fetchSingleMovie();
+	}, []);
 
 	return (
 		<div>
-			{/* <div className="card w-96 bg-base-100 shadow-xl image-full">
+			<div className="card w-96 bg-base-100 shadow-xl image-full">
 				<figure>
 					<img src={data?.cover_url} alt="cover" />
 				</figure>
@@ -44,7 +63,7 @@ const MovieDetails = () => {
 						</button>
 					</div>
 				</div>
-			</div> */}
+			</div>
 		</div>
 	);
 };
