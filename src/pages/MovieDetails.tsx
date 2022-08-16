@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { IMovie } from "../interfaces/IDataMovies";
-import MCUAPI, { getSingleMovie } from "../services/MCUAPI";
+import MCUAPI from "../services/MCUAPI";
 
 type DataDetails = {
 	id: number;
