@@ -1,4 +1,4 @@
-export interface IMovies {
+export interface IMovie {
 	box_office: string;
 	chronology: number;
 	cover_url: string;
@@ -9,7 +9,7 @@ export interface IMovies {
 	overview: string;
 	phase: number;
 	post_credit_scenes: number;
-	related_movies: IMovies[];
+	related_movies: IMovie[];
 	release_date: string;
 	saga: string;
 	title: string;
@@ -17,6 +17,6 @@ export interface IMovies {
 }
 
 export interface IDataMovies {
-	data: IMovies[];
+	data: IMovie[];
 	total: number;
 }

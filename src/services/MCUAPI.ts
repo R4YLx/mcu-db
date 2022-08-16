@@ -1,5 +1,5 @@
-import { IDataTvShows, ITvShows } from "./../interfaces/IDataTvShows";
-import { IDataMovies, IMovies } from "../interfaces/IDataMovies";
+import { IDataTvShows, ITvShow } from "./../interfaces/IDataTvShows";
+import { IDataMovies, IMovie } from "../interfaces/IDataMovies";
 
 import axios from "axios";
 
@@ -28,7 +28,7 @@ const getTvShows = async (endpoint: string) => {
  * Get single movie
  */
 export const getSingleMovie = async (id: number) => {
-	const res = await axios.get<IMovies>(`/movies/${id}`);
+	const res = await axios.get<IMovie>(`/movies/${id}`);
 
 	return res.data;
 };
@@ -37,7 +37,7 @@ export const getSingleMovie = async (id: number) => {
  * Get single tv show
  */
 export const getSingleTvShow = async (id: number) => {
-	const res = await axios.get<ITvShows>(`/tvshows/${id}`);
+	const res = await axios.get<ITvShow>(`/tvshows/${id}`);
 
 	return res.data;
 };

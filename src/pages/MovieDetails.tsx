@@ -1,17 +1,13 @@
-import { useQuery } from "@tanstack/react-query";
 import { useNavigate, useParams } from "react-router-dom";
 import { getSingleMovie } from "../services/MCUAPI";
 
 const MovieDetails = () => {
 	const { id } = useParams();
-	const { data } = useQuery(["movie", { id }], getSingleMovie);
 	const navigate = useNavigate();
 
-	console.log("id", id);
-	console.log("Clicked movie", data);
 	return (
 		<div>
-			<div className="card w-96 bg-base-100 shadow-xl image-full">
+			{/* <div className="card w-96 bg-base-100 shadow-xl image-full">
 				<figure>
 					<img src={data?.cover_url} alt="cover" />
 				</figure>
@@ -48,7 +44,7 @@ const MovieDetails = () => {
 						</button>
 					</div>
 				</div>
-			</div>
+			</div> */}
 		</div>
 	);
 };

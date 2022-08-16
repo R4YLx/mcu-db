@@ -1,4 +1,4 @@
-export interface ITvShows {
+export interface ITvShow {
 	cover_url: string;
 	directed_by: string;
 	id: number;
@@ -15,6 +15,6 @@ export interface ITvShows {
 }
 
 export interface IDataTvShows {
-	data: ITvShows[];
+	data: ITvShow[];
 	total: number;
 }
