@@ -6,28 +6,25 @@ type Movie = {
 };
 
 const MovieCard = ({ data }: Movie) => {
-	console.log("Movies in array:", data);
-
 	return (
-		<div>
+		<>
 			{data.map((movie: IMovie) => (
-				<div className="card w-96 bg-base-100 shadow-xl" key={movie.id}>
-					<h1>{movie.title}</h1>
+				<div className="card w-80 bg-base-100 shadow-xl" key={movie.id}>
 					<figure>
 						<img src={movie.cover_url} alt="poster" />
 					</figure>
 					<div className="card-body">
 						<h2 className="card-title">{movie.title}</h2>
-						<p>{movie.overview}</p>
+						<p>Directed by: {movie.directed_by ? movie.directed_by : "TBA"}</p>
 						<Link to={`/movies/${movie.id}`}>
 							<div className="card-actions justify-end">
-								<button className="btn btn-primary">Read more</button>
+								<button className="btn btn-primary mt-4">Read more</button>
 							</div>
 						</Link>
 					</div>
 				</div>
 			))}
-		</div>
+		</>
 	);
 };
 

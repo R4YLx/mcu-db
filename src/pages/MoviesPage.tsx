@@ -19,7 +19,7 @@ const MoviesPage = () => {
 	}, []);
 
 	return (
-		<main className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-4">
+		<main className="grid grid-cols-1 gap-8 py-8 justify-items-center md:grid-cols-2 lg:grid-cols-4">
 			{isLoading && <h1>LOADING</h1>}
 
 			{data && <MovieCard data={data.data} />}
