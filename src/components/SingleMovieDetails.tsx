@@ -47,7 +47,7 @@ const SingleMovieDetails = ({ data }: Movie) => {
 				</p>
 
 				<div className="divider">Trailer</div>
-				<iframe src={data?.trailer_url}></iframe>
+				<embed type="text/html" src={data?.trailer_url}></embed>
 
 				<div className="divider">Related movies:</div>
 				<div>
