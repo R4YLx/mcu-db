@@ -18,21 +18,21 @@ const SingleMovieDetails = ({ data }: Movie) => {
 				<h2 className="card-title">{data?.title}</h2>
 
 				<div className="divider">Synopsis</div>
-
-				<p>{data?.overview}</p>
+				{data?.overview ? <p>{data?.overview}</p> : "TBA"}
 
 				<div className="divider"></div>
 
 				<p>
-					<b> Release date:</b> {data?.release_date}
+					<b> Release date:</b>{" "}
+					{data?.release_date ? data?.release_date : "TBA"}
 				</p>
 				<p>
 					<b>Directed by: </b>
-					{data?.directed_by}
+					{data?.directed_by ? data?.directed_by : "TBA"}
 				</p>
 				<p>
 					<b>Duration: </b>
-					{data?.duration} minutes
+					{data?.duration ? `${data?.duration} minutes` : " TBA"}
 				</p>
 				<p>
 					<b>Box office: </b>${data?.box_office}
@@ -47,7 +47,11 @@ const SingleMovieDetails = ({ data }: Movie) => {
 				</p>
 
 				<div className="divider">Trailer</div>
-				<embed type="text/html" src={data?.trailer_url}></embed>
+				{data?.trailer_url ? (
+					<embed type="text/html" src={data?.trailer_url}></embed>
+				) : (
+					<p>Coming soon</p>
+				)}
 
 				<div className="divider">Related movies:</div>
 				<div>
