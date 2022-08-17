@@ -10,7 +10,11 @@ const HomePage = () => {
 						can be found on my GitHub page:
 					</p>
 					<p>
-						<a className="link link-accent link-hover">
+						<a
+							className="link link-accent link-hover"
+							href="https://github.com/R4YLx/mcu-db"
+							target="blank"
+						>
 							https://github.com/R4YLx/mcu-db
 						</a>
 					</p>
