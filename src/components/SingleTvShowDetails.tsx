@@ -51,7 +51,7 @@ const SingleTvShowDetails = ({ data }: TvShow) => {
 
 				<div className="card-actions justify-end">
 					<button
-						className="btn bg-[#ED1D24] btn-outline text-white"
+						className="btn bg-[#ED1D24] btn-outline text-white my-4"
 						onClick={() => navigate(-1)}
 					>
 						Back
