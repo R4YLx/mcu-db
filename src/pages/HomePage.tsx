@@ -6,7 +6,13 @@ const HomePage = () => {
 				<div className="max-w-md">
 					<h1 className="mb-5 text-5xl font-bold">Welcome</h1>
 					<p className="mb-5">
-						This is a database with MCU related movies and TV shows.
+						This is a database with MCU related movies and TV shows. Soure code
+						can be found on my GitHub page:
+					</p>
+					<p>
+						<a className="link link-accent link-hover">
+							https://github.com/R4YLx/mcu-db
+						</a>
 					</p>
 				</div>
 			</div>
