@@ -22,7 +22,7 @@ const TvShowDetails = () => {
 	}, []);
 
 	return (
-		<div>
+		<div className="flex justify-center content-center md:py-8">
 			{isLoading && <LoadingSpinner />}
 
 			{data && <SingleTvShowDetails data={data} />}
