@@ -8,7 +8,7 @@ const TvShowCard = ({ data }: TvShow) => {
 	return (
 		<>
 			{data.map((show: ITvShow) => (
-				<div className="card w-80 bg-base-100 shadow-xl" key={show.id}>
+				<div className="card w-auto bg-base-100 shadow-xl" key={show.id}>
 					<figure>
 						<img src={show.cover_url} alt="poster" />
 					</figure>

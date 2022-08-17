@@ -9,7 +9,7 @@ const MovieCard = ({ data }: Movie) => {
 	return (
 		<>
 			{data.map((movie: IMovie) => (
-				<div className="card w-80 bg-base-100 shadow-xl" key={movie.id}>
+				<div className="card w-auto bg-base-100 shadow-xl" key={movie.id}>
 					<figure>
 						<img src={movie.cover_url} alt="poster" />
 					</figure>
