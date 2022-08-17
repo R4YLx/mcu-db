@@ -38,7 +38,7 @@ const Navbar = () => {
 				</div>
 			</div>
 			<div className="navbar-center">
-				<img src="../../public/logo.svg" alt="logo" className="w-20" />
+				<img src={"../../public/logo.svg"} alt="logo" className="w-20" />
 			</div>
 			<div className="navbar-end">
 				<button
