@@ -5,7 +5,7 @@ type Movie = {
 	data: IMovie;
 };
 
-const SingleMovieDetails = ({ data }: Movie) => {
+const SingleMovieDetails = ({ data }: Movie): JSX.Element => {
 	const navigate = useNavigate();
 
 	return (

@@ -7,7 +7,7 @@ import MovieDetails from "./pages/MovieDetails";
 import HomePage from "./pages/HomePage";
 import TvShowDetails from "./pages/TvShowDetails";
 
-function App() {
+function App(): JSX.Element {
 	return (
 		<div className="App bg-gradient-to-t from-gray-900 to-zinc-900 min-h-screen h-full">
 			<Navbar />

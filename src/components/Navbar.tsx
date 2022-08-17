@@ -1,6 +1,6 @@
 import { NavLink } from "react-router-dom";
 
-const Navbar = () => {
+const Navbar = (): JSX.Element => {
 	return (
 		<div className="navbar bg-[#ED1D24]">
 			<div className="navbar-start">

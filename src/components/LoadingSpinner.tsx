@@ -1,6 +1,6 @@
 import { Triangle } from "react-loader-spinner";
 
-const LoadingSpinner = () => {
+const LoadingSpinner = (): JSX.Element => {
 	return (
 		<div className="py-8">
 			<Triangle

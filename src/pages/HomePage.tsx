@@ -1,4 +1,4 @@
-const HomePage = () => {
+const HomePage = (): JSX.Element => {
 	return (
 		<div className="hero min-h-screen">
 			<div className="hero-overlay bg-opacity-60"></div>

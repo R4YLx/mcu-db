@@ -4,7 +4,7 @@ import { ITvShow } from "../interfaces/IDataTvShows";
 type TvShow = {
 	data: ITvShow[];
 };
-const TvShowCard = ({ data }: TvShow) => {
+const TvShowCard = ({ data }: TvShow): JSX.Element => {
 	return (
 		<>
 			{data.map((show: ITvShow) => (

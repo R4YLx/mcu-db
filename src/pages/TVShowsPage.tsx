@@ -4,7 +4,7 @@ import TvShowCard from "../components/TvShowCard";
 import { IDataTvShows } from "../interfaces/IDataTvShows";
 import MCUAPI from "../services/MCUAPI";
 
-const TVShowsPage = () => {
+const TVShowsPage = (): JSX.Element => {
 	const [data, setData] = useState<IDataTvShows>();
 	const [isLoading, setIsLoading] = useState<boolean>();
 

@@ -5,7 +5,7 @@ type Movie = {
 	data: IMovie[];
 };
 
-const MovieCard = ({ data }: Movie) => {
+const MovieCard = ({ data }: Movie): JSX.Element => {
 	return (
 		<>
 			{data.map((movie: IMovie) => (

@@ -1,4 +1,4 @@
-const ErrorAlert = () => {
+const ErrorAlert = (): JSX.Element => {
 	return (
 		<div className="alert alert-error shadow-lg">
 			<div>

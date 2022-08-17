@@ -5,10 +5,10 @@ import SingleTvShowDetails from "../components/SingleTvShowDetails";
 import { ITvShow } from "../interfaces/IDataTvShows";
 import MCUAPI from "../services/MCUAPI";
 
-const TvShowDetails = () => {
+const TvShowDetails = (): JSX.Element => {
 	const [data, setData] = useState<ITvShow>();
 	const [isLoading, setIsLoading] = useState<boolean>();
-	const params = useParams();
+	const params = useParams<string>();
 
 	const fetchSingleTvShow = async () => {
 		setIsLoading(true);

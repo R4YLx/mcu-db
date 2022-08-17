@@ -4,7 +4,7 @@ import MovieCard from "../components/MovieCard";
 import { IDataMovies } from "../interfaces/IDataMovies";
 import MCUAPI from "../services/MCUAPI";
 
-const MoviesPage = () => {
+const MoviesPage = (): JSX.Element => {
 	const [data, setData] = useState<IDataMovies>();
 	const [isLoading, setIsLoading] = useState<boolean>(false);
 

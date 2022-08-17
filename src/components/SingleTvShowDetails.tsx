@@ -5,8 +5,9 @@ type TvShow = {
 	data: ITvShow;
 };
 
-const SingleTvShowDetails = ({ data }: TvShow) => {
+const SingleTvShowDetails = ({ data }: TvShow): JSX.Element => {
 	const navigate = useNavigate();
+
 	return (
 		<div className="card w-auto md:w-3/5 lg:w-2/4 2xl:w-1/4 bg-base-100 shadow-xl image-full">
 			<figure>
