@@ -1,27 +1,28 @@
+import { useEffect, useState } from "react";
+import TvShowCard from "../components/TvShowCard";
+import { IDataTvShows } from "../interfaces/IDataTvShows";
+import MCUAPI from "../services/MCUAPI";
+
 const TVShowsPage = () => {
+	const [data, setData] = useState<IDataTvShows>();
+	const [isLoading, setIsLoading] = useState<boolean>();
+
+	const fetchTvShows = async () => {
+		setIsLoading(true);
+		const mcuData = await MCUAPI.getTvShows("/tvshows");
+		setData(mcuData);
+		setIsLoading(false);
+	};
+
+	useEffect(() => {
+		fetchTvShows();
+	}, []);
+
 	return (
-		<main className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-4">
-			{/* {isSuccess &&
-				data?.data.map((tvshow: any) => (
-					<div key={tvshow.id}>
-						<div className="card m-8 min-h-max">
-							<figure>
-								<img src={tvshow.cover_url} alt="poster" className="w-full" />
-							</figure>
-							<div className="card-body bg-base-100 shadow-xl">
-								<h2 className="card-title">{tvshow.title}</h2>
-								<p className="truncate italic">Synopsis: {tvshow.overview}</p>
-								<Link to={`/tvshows/${tvshow.id}`}>
-									<div className="card-actions justify-end">
-										<button className="btn bg-[#ED1D24] btn-outline text-white mt-4">
-											Read more
-										</button>
-									</div>
-								</Link>
-							</div>
-						</div>
-					</div>
-				))} */}
+		<main className="grid grid-cols-1 gap-8 py-8 justify-items-center md:grid-cols-2 lg:grid-cols-4">
+			{isLoading && <h1>LOADING</h1>}
+
+			{data && <TvShowCard data={data.data} />}
 		</main>
 	);
 };
