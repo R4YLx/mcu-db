@@ -38,11 +38,13 @@ const Navbar = () => {
 				</div>
 			</div>
 			<div className="navbar-center">
-				{/* <a className="btn btn-ghost normal-case text-xl">MCU-DB</a> */}
 				<img src="../../public/logo.svg" alt="logo" className="w-20" />
 			</div>
 			<div className="navbar-end">
-				<button className="btn btn-ghost btn-circle">
+				<button
+					className="btn btn-ghost btn-circle"
+					onClick={() => alert("Not working yet. But soon! Maybe...")}
+				>
 					<svg
 						xmlns="http://www.w3.org/2000/svg"
 						className="h-5 w-5"
