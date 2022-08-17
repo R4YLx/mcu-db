@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import LoadingSpinner from "../components/LoadingSpinner";
 import SingleMovieDetails from "../components/SingleMovieDetails";
 import { IMovie } from "../interfaces/IDataMovies";
 import MCUAPI from "../services/MCUAPI";
@@ -22,7 +23,7 @@ const MovieDetails = () => {
 
 	return (
 		<div>
-			{isLoading && <h1>LOADING...</h1>}
+			{isLoading && <LoadingSpinner />}
 
 			{data && <SingleMovieDetails data={data} />}
 		</div>

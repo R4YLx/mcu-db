@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import LoadingSpinner from "../components/LoadingSpinner";
 import MovieCard from "../components/MovieCard";
 import { IDataMovies } from "../interfaces/IDataMovies";
 import MCUAPI from "../services/MCUAPI";
@@ -20,7 +21,7 @@ const MoviesPage = () => {
 
 	return (
 		<main className="grid grid-cols-1 gap-8 py-8 justify-items-center md:grid-cols-2 lg:grid-cols-4">
-			{isLoading && <h1>LOADING</h1>}
+			{isLoading && <LoadingSpinner />}
 
 			{data && <MovieCard data={data.data} />}
 		</main>

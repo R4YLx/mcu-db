@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import LoadingSpinner from "../components/LoadingSpinner";
 import SingleTvShowDetails from "../components/SingleTvShowDetails";
 import { ITvShow } from "../interfaces/IDataTvShows";
 import MCUAPI from "../services/MCUAPI";
@@ -22,7 +23,7 @@ const TvShowDetails = () => {
 
 	return (
 		<div>
-			{isLoading && <h1>LOADING...</h1>}
+			{isLoading && <LoadingSpinner />}
 
 			{data && <SingleTvShowDetails data={data} />}
 		</div>
