@@ -64,10 +64,7 @@ const SingleMovieDetails = ({ data }: Movie) => {
 					</ul>
 				</div>
 				<div className="card-actions justify-end">
-					<button
-						className="btn bg-[#ED1D24] btn-outline text-white"
-						onClick={() => navigate(-1)}
-					>
+					<button className="btn btn-primary my-4" onClick={() => navigate(-1)}>
 						Back
 					</button>
 				</div>
